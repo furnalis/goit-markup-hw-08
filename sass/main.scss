@@ -1,0 +1,18 @@
+@use './utils/vars' as *;
+@use './utils/mixin' as *;
+
+@import './components/reset';
+@import './components/header';
+@import './components/container';
+@import './components/section';
+@import './components/solution';
+@import './components/btn';
+@import './components/lorem';
+@import './components/ourjob';
+@import './components/squad';
+@import './components/list';
+@import './components/customers';
+@import './components/footer';
+@import './components/subscribe';
+@import './components/modal';
+@import './components/projects';

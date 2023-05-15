@@ -1,0 +1,48 @@
+.squad {
+  background: #f5f4fa;
+
+  &__item {
+    background-color: $firstcolor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__name,
+  &__position {
+    line-height: 1.9;
+    text-align: center;
+  }
+  &__name {
+    color: $secondblack;
+    text-align: center;
+    padding-top: 30px;
+  }
+  &__position {
+    color: $colorgrey;
+    padding-bottom: 30px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    color: $iconcolor;
+  }
+  &__icon-website {
+    fill: $iconcolor;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $iconcolor;
+    transition: background-color $transdurationtfunction;
+  }
+
+  &__icon-website:is(:hover, :focus) {
+    fill: $firstcolor;
+    background-color: $secondcolor;
+  }
+}

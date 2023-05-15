@@ -1,0 +1,20 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 600px;
+  }
+  &__footer {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

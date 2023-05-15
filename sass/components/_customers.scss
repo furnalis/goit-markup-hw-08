@@ -1,0 +1,19 @@
+.customers {
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $iconcolor;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    fill: $iconcolor;
+    transition: fill $transdurationtfunction, border $transdurationtfunction;
+  }
+
+  &__logo:is(:hover, :focus) {
+    fill: $secondcolor;
+    border-color: $secondcolor;
+    cursor: pointer;
+  }
+}

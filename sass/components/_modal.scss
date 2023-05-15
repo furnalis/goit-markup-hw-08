@@ -1,0 +1,196 @@
+.is-active {
+  position: relative;
+  color: $secondcolor;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 48px;
+  width: 100%;
+  height: 4px;
+  background-color: $secondcolor;
+  border-radius: 2px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.is-hidden .modal {
+  transform: scale(2);
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 1250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: not-allowed;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: $firstcolor;
+  box-shadow: $colorbackgroundmodal;
+  border-radius: 4px;
+  transition: transform 1250ms;
+  transform: scale(1);
+  cursor: auto;
+  padding: 40px;
+
+  &__close-btn {
+    display: flex;
+    fill: $textcolor;
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 6px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .modal > p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+  &__form-input {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 100%;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $colorgrey;
+  }
+
+  &__form-box {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    padding-top: 11px;
+    padding-left: 12px;
+    padding-bottom: 11px;
+    outline: none;
+    transition: $transdurationtfunction;
+  }
+  &__form-box svg {
+    position: absolute;
+  }
+  &__form-box input {
+    border: none;
+    width: 100%;
+    outline: none;
+    padding-left: 30px;
+  }
+  &__form-box:is(:active, :focus-within) {
+    border: 1px solid $secondcolor;
+    fill: $secondcolor;
+  }
+  &__form-box input:is(:active, :focus) {
+    color: $secondcolor;
+  }
+  &__form-box textarea {
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+    height: 96px;
+  }
+  &__form-box textarea:is(:focus, :active) {
+    color: $secondcolor;
+  }
+  &__form-box textarea:focus::placeholder {
+    color: $secondcolor;
+    transition: $transdurationtfunction;
+  }
+  &__form-checkbox {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $colorgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+  }
+  &__form-checkbox a {
+    color: $secondcolor;
+    text-decoration: underline;
+  }
+  &__form-checkbox input {
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 2px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: $firstcolor;
+    cursor: pointer;
+  }
+  &__form-checkbox svg {
+    fill: $secondcolor;
+    position: absolute;
+  }
+  &__form-checkbox input:checked {
+    border: none;
+    z-index: -1;
+  }
+  &__form-checkbox span {
+    position: relative;
+    display: flex;
+  }
+  &__form button {
+    padding: 10px 76px;
+    border: none;
+    background-color: $secondcolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $firstcolor;
+    margin-top: 28px;
+    transition: $transdurationtfunction;
+  }
+  &__form button:is(:hover, :focus) {
+    background-color: $colorbackgroundsectionsolution;
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.5);
+  }
+}

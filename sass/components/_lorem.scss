@@ -1,0 +1,34 @@
+.lorem {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 94px;
+
+  &__item {
+    width: 270px;
+  }
+  &__icon {
+    background-color: $colorbackgroundsquad;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: $secondblack;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $colorgrey;
+    letter-spacing: 0.03em;
+  }
+}

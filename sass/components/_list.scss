@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+  &__customers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 94px;
+  }
+}
