@@ -11,12 +11,17 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: grid;
     grid-template-columns: 354px 354px;
+    margin-bottom: 0;
   }
 
   &__item {
     width: 270px;
+
     @media screen and (max-width: 767px) {
       width: 360px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 100%;
     }
   }
   &__icon {
@@ -40,7 +45,6 @@
       text-align: center;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      text-align: center;
     }
   }
 

@@ -9,6 +9,15 @@
     height: 92px;
     fill: $iconcolor;
     transition: fill $transdurationtfunction, border $transdurationtfunction;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__logo:is(:hover, :focus) {

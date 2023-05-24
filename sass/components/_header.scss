@@ -10,6 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   &__navigation {
@@ -22,6 +27,9 @@
     font-size: 26px;
     line-height: 3.1;
     color: $secondblack;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-left: 15px;
+    }
   }
 
   &__blue-logo {
@@ -63,6 +71,10 @@
     gap: 30px;
     @media screen and (max-width: 767px) {
       display: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: inline;
+      padding-right: 10px;
     }
   }
 

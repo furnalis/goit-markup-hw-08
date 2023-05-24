@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
   &__btn {
     gap: 24px;
     fill: $firstcolor;
@@ -21,6 +27,12 @@
     padding: 16px 15px;
     color: rgba(255, 255, 255, 0.3);
     outline: none;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    }
     &[name='newsletter-email']:focus {
       border: 1px solid $secondcolor;
       color: $secondcolor;

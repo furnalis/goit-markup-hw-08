@@ -14,6 +14,7 @@
   border-radius: 2px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     transform: translateY(39px);
+    top: 10px;
   }
 }
 
@@ -55,7 +56,7 @@
   cursor: auto;
   padding: 40px;
   @media screen and (max-width: 767px) {
-    max-width: 450px;
+    max-width: 390px;
     height: auto;
   }
 
@@ -199,5 +200,13 @@
   &__form button:is(:hover, :focus) {
     background-color: $colorbackgroundsectionsolution;
     box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  &__tab {
+    position: relative;
+    display: flex;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
 }

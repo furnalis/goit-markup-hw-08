@@ -20,8 +20,14 @@
     gap: 30px;
     padding-bottom: 94px;
     @media screen and (max-width: 767px) {
-      align-items: center;
-      flex-direction: column;
+      column-count: 2;
+      display: block;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      column-count: 3;
+      display: block;
+      margin-right: 15px;
+      margin-left: 15px;
     }
   }
 }

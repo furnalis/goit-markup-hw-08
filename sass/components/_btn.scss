@@ -10,6 +10,10 @@
   border: none;
   border-radius: 4px;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
   &__second {
     background: #f5f4fa;
     border: none;

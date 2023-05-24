@@ -5,7 +5,13 @@
 
   @media screen and (max-width: 767px) {
     align-items: center;
-    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__big {
@@ -15,6 +21,10 @@
     justify-content: center;
     gap: 30px;
     height: 600px;
+
+    @media screen and (max-width: 767px) {
+      height: 390px;
+    }
   }
   &__footer {
     padding: 60px 0;
