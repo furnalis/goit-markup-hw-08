@@ -58,6 +58,17 @@
             >
           </li>
         </ul>
+        <!--MOBILE MENU-->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          tabindex="1"
+        >
+          <svg width="40" height="40" class="menu-toggle__icon" tabindex="0">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--main with information about website-->
@@ -119,10 +130,10 @@
             </p>
           </li>
         </ul>
-        <section>
+        <section class="teltab">
           <h2 class="section__title">Czym się zajmujemy</h2>
           <section class="ourjob__offer">
-            <ul class="list container">
+            <ul class="ourjob__list container">
               <li class="ourjob__item">
                 <img alt="Programowanie" width="370" height="294" src="images/img1.jpg" />
                 <p class="ourjob__text">Aplikacje komputerowe</p>
@@ -146,7 +157,15 @@
           <ul class="list">
             <li class="squad__item">
               <figure>
-                <img alt="Mężczyzna" width="270" height="260" src="images/img4.jpg" />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/squad/product-designer-mobile.jpg"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="./images/squad/product-designer-tablet.jpg"
+                />
+                <img src="./images/squad/product-designer-desktop.jpg" />
                 <figcaption>
                   <h4 class="squad__name">John Doe</h4>
                   <p class="squad__position">Product Designer</p>
@@ -360,13 +379,13 @@
     </main>
     <!--footer with contact infromation-->
     <footer class="footer__backgroud">
-      <div class="container container__footer">
+      <div class="container mobile-text container__footer">
         <div>
           <a class="footer__style" href="index.html"><span class="footer__logo">Web</span>Studio</a>
           <address>
             <ul>
               <li>
-                <p class="footer__adress">m. Warszawa, Aleje Jerozolimskie 21</p>
+                <p class="mobile-text footer__adress">m. Warszawa, Aleje Jerozolimskie 21</p>
               </li>
               <li>
                 <a class="footer__telmail" href="mailto:info@example.com">info@example.com</a>
@@ -489,6 +508,47 @@
         </button>
       </div>
     </div>
+    <!--MOBILE MENU-->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="mobile-menu__btn js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-mobile-menu-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__box">
+        <ul class="mobile-menu__list">
+          <li><a class="mobile-menu__item" href="./index.html">Agencja</a></li>
+          <li><a class="mobile-menu__item" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="mobile-menu__item" href="#">Kontakt</a></li>
+        </ul>
+        <div>
+          <ul class="mobile-menu__contact">
+            <li>
+              <a class="mobile-menu__tel" href="tel:+48111111111">+48 111 111 111</a>
+            </li>
+            <li>
+              <a class="mobile-menu__email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__social">
+            <li><a class="mobile-menu__link" href="#">Instagram</a></li>
+            <li><a class="mobile-menu__link" href="#">Twitter</a></li>
+            <li><a class="mobile-menu__link" href="#">Facebook</a></li>
+            <li><a class="mobile-menu__link" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT TO OPEN FORM -->
     <script src="./js/modal.js"></script>
+    <!-- SCRIPT TO OPEN MOBILE MENU-->
+    <script defer src="js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

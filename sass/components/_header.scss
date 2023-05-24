@@ -1,6 +1,11 @@
 .header {
   border-bottom: 1px solid $colorheaderline;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -40,6 +45,9 @@
     align-items: center;
     gap: 10px;
     transition: color $transdurationtfunction;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__black {
@@ -53,6 +61,9 @@
   &__contact {
     display: flex;
     gap: 30px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__contact--color {

@@ -12,6 +12,9 @@
   height: 4px;
   background-color: $secondcolor;
   border-radius: 2px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    transform: translateY(39px);
+  }
 }
 
 .is-hidden {
@@ -51,6 +54,10 @@
   transform: scale(1);
   cursor: auto;
   padding: 40px;
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
+    height: auto;
+  }
 
   &__close-btn {
     display: flex;

@@ -4,8 +4,20 @@
   justify-content: center;
   margin-bottom: 94px;
 
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: grid;
+    grid-template-columns: 354px 354px;
+  }
+
   &__item {
     width: 270px;
+    @media screen and (max-width: 767px) {
+      width: 360px;
+    }
   }
   &__icon {
     background-color: $colorbackgroundsquad;
@@ -13,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 100px;
+    padding: 30px 100px;
     margin-bottom: 30px;
   }
   &__title {
@@ -23,6 +35,13 @@
     text-transform: uppercase;
     color: $secondblack;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__text {
