@@ -166,7 +166,9 @@
 
   &__web {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      display: flex;
+      align-items: center;
+      display: inline;
+      padding-left: 100px;
     }
   }
 }
