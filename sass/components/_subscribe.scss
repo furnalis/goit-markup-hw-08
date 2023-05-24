@@ -7,6 +7,8 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: inline-flex;
+    flex-direction: column;
   }
   &__btn {
     gap: 24px;

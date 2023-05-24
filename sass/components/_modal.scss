@@ -42,11 +42,7 @@
   transition-duration: 1250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: not-allowed;
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    position: absolute;
 }
-
 .modal {
   position: absolute;
   width: 528px;
@@ -154,6 +150,10 @@
     align-items: center;
     gap: 7px;
     cursor: pointer;
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      line-height: 1.16;
+    }
   }
   &__form-checkbox a {
     color: $secondcolor;
@@ -182,6 +182,9 @@
   &__form-checkbox span {
     position: relative;
     display: flex;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
   &__form button {
     padding: 10px 76px;
@@ -209,7 +212,7 @@
     position: relative;
     display: flex;
     @media screen and (max-width: 767px) {
-        display: block;
+      display: block;
     }
   }
 }
