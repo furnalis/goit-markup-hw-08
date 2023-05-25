@@ -215,4 +215,12 @@
       display: block;
     }
   }
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
 }

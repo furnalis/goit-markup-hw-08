@@ -127,9 +127,6 @@
     @media screen and (max-width: 767px) {
       margin-top: 80px;
     }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    }
   }
 
   &__btn {
@@ -176,5 +173,24 @@
       text-align: center;
       padding-left: 0;
     }
+  }
+}
+
+.teltab {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.mobile-text {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: grid;
   }
 }

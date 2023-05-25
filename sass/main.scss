@@ -1,7 +1,7 @@
 @use './utils/vars' as *;
 @use './utils/mixin' as *;
 
-@import './components/reset';
+@import './utils/reset';
 @import './components/header';
 @import './components/container';
 @import './components/section';
@@ -18,4 +18,3 @@
 @import './components/projects';
 @import './components/menu-toggle';
 @import './components/mobile-menu';
-@import './components/others';
