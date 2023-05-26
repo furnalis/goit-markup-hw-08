@@ -3,25 +3,25 @@
   gap: 30px;
   justify-content: center;
   margin-bottom: 94px;
+  flex-direction: column;
+  margin-bottom: 0px;
 
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    margin-bottom: 0px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 354px 354px;
-    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    grid-template-columns: 270px 270px 270px 270px;
+    margin-bottom: 94px;
   }
 
   &__item {
-    width: 270px;
+    width: 100%;
+      max-width: 450px;
 
-    @media screen and (max-width: 767px) {
-      width: 360px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 270px;
     }
   }
   &__icon {
@@ -40,9 +40,10 @@
     text-transform: uppercase;
     color: $secondblack;
     margin-bottom: 10px;
+    text-align: center;
 
-    @media screen and (max-width: 767px) {
-      text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
     }
   }
 

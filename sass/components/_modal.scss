@@ -12,7 +12,7 @@
   height: 4px;
   background-color: $secondcolor;
   border-radius: 2px;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     transform: translateY(39px);
     top: 10px;
   }
@@ -45,8 +45,8 @@
 }
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  max-width: 390px;
+  height: auto;
   background-color: $firstcolor;
   box-shadow: $colorbackgroundmodal;
   border-radius: 4px;
@@ -54,9 +54,8 @@
   transform: scale(1);
   cursor: auto;
   padding: 40px;
-  @media screen and (max-width: 767px) {
-    max-width: 390px;
-    height: auto;
+  @media screen and (min-width: 768px) {
+    min-width: 528px;
   }
 
   &__close-btn {
@@ -141,8 +140,8 @@
   }
   &__form-checkbox {
     margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: $colorgrey;
     display: flex;
@@ -150,9 +149,9 @@
     align-items: center;
     gap: 7px;
     cursor: pointer;
-    @media screen and (max-width: 767px) {
-      font-size: 12px;
-      line-height: 1.16;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.71;
     }
   }
   &__form-checkbox a {
@@ -181,9 +180,9 @@
   }
   &__form-checkbox span {
     position: relative;
-    display: flex;
-    @media screen and (max-width: 767px) {
-      display: block;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: flex;
     }
   }
   &__form button {
@@ -210,9 +209,9 @@
 
   &__tab {
     position: relative;
-    display: flex;
-    @media screen and (max-width: 767px) {
-      display: block;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: flex;
     }
   }
   &__text {

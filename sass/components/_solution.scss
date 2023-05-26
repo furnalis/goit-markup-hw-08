@@ -1,36 +1,43 @@
 .solution {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/img17.jpg);
+    url(../images/mobile.jpg);
+    background-image: image-set(
+      url("../images/mobile.jpg") 1x,
+      url("../images/mobile_2x.jpg") 2x);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  @media screen and (max-width: 767px) {
-    background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 768px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/mobile.jpg);
+    url(../images/tablet.jpg);
+    background-image: image-set(
+    url("../images/tablet.jpg") 1x,
+    url("../images/tablet_2x.jpg") 2x);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    background-size: cover;
+  @media screen and (min-width: 1200px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/tablet.jpg);
+    url(../images/img17.jpg);
+    background-image: image-set(
+    url("../images/img17.jpg") 1x,
+    url("../images/img17_2x.jpg") 2x);
   }
 
   &__text {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.62;
+    max-width: 365px;
+    margin-top: 0;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $firstcolor;
     text-align: center;
-    margin-top: 200px;
-    width: 696px;
-
-    @media screen and (max-width: 767px) {
-      font-size: 26px;
-      line-height: 1.62;
-      max-width: 365px;
-      margin-top: 0;
+  @media screen and (min-width: 768px) {
+      max-width: 696px;
+      margin-top: 200px;
+      font-size: 44px;
+      line-height: 1.4;
     }
   }
 }

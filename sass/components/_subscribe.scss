@@ -2,13 +2,15 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  @media screen and (max-width: 767px) {
-    display: inline;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  display: inline-block;
+  @media screen and (min-width: 768px) {
     display: inline-flex;
     flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 354px 234px;
   }
   &__btn {
     gap: 24px;
@@ -24,16 +26,21 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    width: 358px;
+    width: 100%;
+    max-width: 480px;
     align-items: center;
     padding: 16px 15px;
     color: rgba(255, 255, 255, 0.3);
     outline: none;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 10px;
+    margin-bottom:10px;
+    @media screen and (min-width: 768px) {
+    width: 450px;
+    margin-bottom:0;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom:0;
     }
     &[name='newsletter-email']:focus {
       border: 1px solid $secondcolor;
@@ -44,3 +51,13 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
+

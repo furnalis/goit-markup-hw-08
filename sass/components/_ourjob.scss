@@ -1,7 +1,8 @@
 .ourjob {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: none;
+    @media screen and (min-width: 768px) {
+    display: block;
+    }
 
   &__offer {
     text-align: center;
@@ -32,8 +33,5 @@
     display: flex;
     gap: 30px;
     justify-content: center;
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
   }
 }
